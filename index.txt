@@ -1,0 +1,38 @@
+==================================
+  Araq's Musings
+==================================
+
+  "The Rule of Least Surprise should not be interpreted as a
+  call for mechanical conservatism in design."
+
+
+Since all my friends constantly nag me about it, here it finally is: My personal
+blog. It's about programming language design and Nim.
+
+In case you didn't notice, `Nim <http://nim-lang.org>`_ is the
+programming language I designed and implemented in my spare time. Nim is
+still in development but it's very useful already; it can compile itself and
+for instance this blog has been created with Nim's documentation generator.
+
+List of Articles
+================
+
+| `Write tracking for Nim <writetracking.html>`_
+| This blog post is about Nim's novel approach to deal with immutability.
+
+| `A new concurrency system for Nim -- part 1 <concurrency.html>`_
+| In this blog post I describe the basic ideas behind Nim's new concurrency
+  model.
+
+| `A new concurrency system for Nim -- part 2 <concurrency2.html>`_
+| In part 2 things get more formal. But in the end you will be rewarded by
+  a nice real world example.
+
+| `Nim and Perl <perlish.html>`_
+| An article showing how Nim's metaprogramming features can even model
+  Perl's features.
+
+| `Karax and Ormin <karax_ormin.html>`_
+| An article showing how Nim can be used to develop simple and efficient single
+  page applications via Nim's JS backend.
+
