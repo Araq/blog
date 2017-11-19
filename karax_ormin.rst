@@ -1,5 +1,5 @@
 ==================================
-  Araq's Musings
+       Karax and Ormin
 ==================================
 
 
@@ -346,5 +346,5 @@ code but this article is already too long. Study the code carefully.
 
 The takeaway from all of this is that a single page application that
 talks to a native SQLite backed server via websockets fits in under
-200 lines of Nim code! The code is easy to read, modify, typesafe
-and efficient. The power of an AST based macro system.
+200 lines of Nim code! The code is quite easy to read, modify; it
+is typesafe and efficient. The power of an AST based macro system.
