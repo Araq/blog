@@ -173,16 +173,13 @@ captures the ``field`` parameter:
 
 .. code-block:: nim
 
-  const
-    login = kstring"login" # a const to prevent typos
-
   proc validateNotEmpty(field: kstring): proc () =
     result = proc () =
       let x = getVNodeById(field)
       if x.text.isNil or x.text == "":
-        errors.setError(login, field & " must not be empty")
+        errors.setError(field, field & " must not be empty")
       else:
-        errors.setError(login, "")
+        errors.setError(field, "")
 
 This indirection required because
 event handlers in Karax need to have the type ``proc ()``
@@ -206,10 +203,12 @@ pieces together to write our login dialog:
       if not loggedIn:
         loginField("Name :", username, "input", validateNotEmpty)
         loginField("Password: ", password, "password", validateNotEmpty)
-        button(onclick = () => loggedIn = true, disabled = errors.disableOnError()):
+        button(onclick = () => (loggedIn = true), disabled = errors.disableOnError()):
           text "Login"
         p:
-          text errors.getError(login)
+          text errors.getError(username)
+        p:
+          text errors.getError(password)
       else:
         p:
           text "You are now logged in."
@@ -223,10 +222,9 @@ disabled until some input fields are validated! This is easily fixed,
 at initialization we have to do:
 
 .. code-block:: nim
-  setError login, username & " must not be empty"
+  setError username, username & " must not be empty"
+  setError password, password & " must not be empty"
 
-
-The full example can be seen in ``karax/examples/login.nim``.
 
 
 Chat frontend
