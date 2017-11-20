@@ -5,23 +5,26 @@
 
 *2017-11-20*
 
-Karax is a relatively simple library which leverages Nim's JS backend to allow
-the development of so called "single page applications" that run in the
-browser. In this series of blog posts I will explain how its DSL works under
-the hood.
+`Karax <https://github.com/pragmagic/karax>`_ is a relatively simple library
+which leverages Nim's JS backend to allow the development of so called
+"single page applications" that run in the browser. In this blog posts I will
+explain how its DSL works under the hood.
 
-Then we will have a look at "Ormin", a library for the construction of SQL
-queries. And finally I will combine these two to create a simple chat
-application.
+In a following blog post we will have a look at
+`Ormin <https://github.com/Araq/ormin>`_, a library for the
+construction of SQL queries and websocket based servers. We will then combine
+Karax and Ormin to create a simple, yet fully functional chat application.
 
 To start, run this::
 
   nimble install karax
 
 Unfortunately the nimble package does not install the examples so to tinker
-with Karax, ``git clone`` is an alternative::
+with; ``git clone`` is an alternative::
 
   git clone https://github.com/pragmagic/karax.git
+  cd karax
+  nimble develop
 
 
 Hello World
