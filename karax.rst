@@ -163,7 +163,7 @@ returns a ``VNode``:
     result = buildHtml(tdiv):
       label(`for` = field):
         text desc
-      input(class = class, id = field, onkeyuplater = validator(field))
+      input(class = class, id = field, onchange = validator(field))
 
 We use the ``karax / errors`` module to help with this error
 logic. The ``errors`` module is mostly a mapping from strings to
