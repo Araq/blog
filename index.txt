@@ -32,7 +32,7 @@ List of Articles
 | An article showing how Nim's metaprogramming features can even model
   Perl's features.
 
-| `Karax and Ormin <karax_ormin.html>`_
+| `Karax <karax.html>`_
 | An article showing how Nim can be used to develop simple and efficient single
   page applications via Nim's JS backend.
 
