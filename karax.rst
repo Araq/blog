@@ -78,7 +78,7 @@ Produces:
   tmp1
 
 
-DOM diffing
+Event model
 ===========
 
 Karax does not change the DOM's event model much, here is a program
@@ -126,6 +126,10 @@ As the examples grow larger it becomes more and more visible of what
 a DSL that composes with the builtin Nim control flow constructs buys us.
 Once you have tasted this power there is no going back and languages
 without AST based macro system simply don't cut it anymore.
+
+
+DOM diffing
+===========
 
 Ok, so now we have seen DOM creation and event handlers. But how does
 Karax actually keep the DOM up to date? The trick is that every event
@@ -181,7 +185,7 @@ captures the ``field`` parameter:
       else:
         errors.setError(field, "")
 
-This indirection required because
+This indirection is required because
 event handlers in Karax need to have the type ``proc ()``
 or ``proc (ev: Event; n: VNode)``. The errors module also
 gives us a handy ``disableOnError`` helper. It returns
