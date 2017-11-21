@@ -7,7 +7,7 @@
 
 `Karax <https://github.com/pragmagic/karax>`_ is a relatively simple library
 which leverages Nim's JS backend to allow the development of so called
-"single page applications" that run in the browser. In this blog posts I will
+"single page applications" that run in the browser. In this blog post I will
 explain how its DSL works under the hood.
 
 In a following blog post we will have a look at
@@ -19,7 +19,7 @@ To start, run this::
 
   nimble install karax
 
-Unfortunately the nimble package does not install the examples so to tinker
+Unfortunately the nimble package does not install the examples to tinker
 with; ``git clone`` is an alternative::
 
   git clone https://github.com/pragmagic/karax.git
@@ -231,7 +231,7 @@ There are likely more elegant solutions to this problem.
 Chat frontend
 =============
 
-Once logged in, we are allowed to send new messages, the code for this
+Once logged in, we are allowed to send new messages, the code for this is
 straight-forward:
 
 .. code-block:: nim
