@@ -35,14 +35,14 @@ The simplest Karax program looks like this:
 .. code-block:: nim
    :file: ../karax/examples/helloworld.nim
 
-(Full example here `<https://github.com/pragmagic/karax/blob/master/examples/helloworld.nim>`_.)
+(Full example `here <https://github.com/pragmagic/karax/blob/master/examples/helloworld.nim>`_.)
 
 Since ``div`` is a keyword in Nim, karax choose to use ``tdiv`` instead
 here. ``tdiv`` produces a ``<div>`` virtual DOM node.
 
 As you can see, karax comes with its own ``buildHtml`` DSL for convenient
 construction of (virtual) DOM trees (of type ``VNode``). Karax provides
-a tiny build tool that generates the HTML boilerplate code that
+a tiny build tool called ``karun`` that generates the HTML boilerplate code that
 embeds and invokes the generated JavaScript code::
 
   nim c tools/karun
@@ -87,7 +87,7 @@ that writes "Hello simulated universe" on a button click:
 .. code-block:: nim
    :file: ../karax/examples/button.nim
 
-(Full example here `<https://github.com/pragmagic/karax/blob/master/examples/button.nim>`_.)
+(Full example `here <https://github.com/pragmagic/karax/blob/master/examples/button.nim>`_.)
 
 
 ``kstring`` is Karax's alias for ``cstring`` (which stands for "compatible
@@ -103,7 +103,7 @@ following syntax is also supported:
 .. code-block:: nim
    :file: ../karax/examples/buttonlambda.nim
 
-(Full example here `<https://github.com/pragmagic/karax/blob/master/examples/buttonlambda.nim>`_.)
+(Full example `here <https://github.com/pragmagic/karax/blob/master/examples/buttonlambda.nim>`_.)
 
 
 The ``buildHtml`` macro produces this code for us:
@@ -215,7 +215,7 @@ pieces together to write our login dialog:
 
   setRenderer loginDialog
 
-(Full example here `<https://github.com/pragmagic/karax/blob/master/examples/login.nim>`_.)
+(Full example `here <https://github.com/pragmagic/karax/blob/master/examples/login.nim>`_.)
 
 This code still has a bug though, when you run it, the ``login`` button is not
 disabled until some input fields are validated! This is easily fixed,
@@ -225,6 +225,7 @@ at initialization we have to do:
   setError username, username & " must not be empty"
   setError password, password & " must not be empty"
 
+There are likely more elegant solutions to this problem.
 
 
 Chat frontend
@@ -267,7 +268,7 @@ straight-forward:
             text "Message: "
           input(class = "input", id = message, onkeyupenter = doSendMessage)
 
-(Full example here `<https://github.com/pragmagic/karax/blob/master/examples/toychat.nim>`_.)
+(Full example `here <https://github.com/pragmagic/karax/blob/master/examples/toychat.nim>`_.)
 
 Without a server that takes our written messages and tells us what other users wrote
 this is a rather limited example though. In the next post I'll talk about how

@@ -7,12 +7,9 @@
 
 
 Since all my friends constantly nag me about it, here it finally is: My personal
-blog. It's about programming language design and Nim.
+blog. It's about programming language design and Nim (what else should it be
+about?).
 
-In case you didn't notice, `Nim <http://nim-lang.org>`_ is the
-programming language I designed and implemented in my spare time. Nim is
-still in development but it's very useful already; it can compile itself and
-for instance this blog has been created with Nim's documentation generator.
 
 List of Articles
 ================
