@@ -270,3 +270,11 @@ ul.auto-toc { list-style-type: none }
 /*a.reference { color: #E00000; font-weight:bold;}
 a.reference:hover {color: #E00000;background-color: #ffff00;display: margin;
   font-weight:bold;}*/
+
+@media screen and (max-width:720px) {
+  #container {
+    max-width: 100%;
+    margin: unset;
+    padding: 0px 10px;
+  }
+}
