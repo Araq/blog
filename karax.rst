@@ -115,10 +115,10 @@ The ``buildHtml`` macro produces this code for us:
 
   let tmp2 = tree(VNodeKind.tdiv)
   let tmp3 = tree(VNodeKind.button)
-  addEventHandler(tmp108023, EventKind.onclick,
+  addEventHandler(tmp3, EventKind.onclick,
                   () => lines.add "Hello simulated universe", kxi)
   add(tmp3, text "Say hello!")
-  add(tmp2, tmp108023)
+  add(tmp2, tmp3)
   for x in lines:
     let tmp4 = tree(VNodeKind.tdiv)
     add(tmp4, text x)
