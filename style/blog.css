@@ -123,6 +123,10 @@ pre, span.tok {
   padding: 2px;
 }
 
+pre {
+  overflow: auto;
+}
+
 span.red {
   color: #A80000;
 }
