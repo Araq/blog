@@ -1,6 +1,10 @@
-================================================
-          Pointer free programming
-================================================
+==================================
+       Araq's Musings
+==================================
+
+
+Nim without GC
+==============
 
 What do ParaSail, "modern" C++ and Rust have in common? They focus
 on "pointer free programming" (ok, maybe Rust doesn't, but it uses
