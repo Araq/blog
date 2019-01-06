@@ -92,7 +92,7 @@ Already, this leads to an insightful result:
 
 (Though it might be true for today's C++ compilers).
 All it takes is a compiler that can inject conditional branches after
-function calls.**
+function calls.
 
 
 
@@ -240,7 +240,7 @@ We are dealing with a duality here:
 
 Traditional exception handling deals
 with the question "what code must still be run when an exception bubbles up
-the calling stack?". (This code needs then to be in a ``finally`` section
+the calling stack?". (That is the code that needs to be in a ``finally`` section
 or in a destructor).
 
 Quirky Exceptions deal with the question "what code
