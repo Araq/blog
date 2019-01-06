@@ -6,13 +6,9 @@
   call for mechanical conservatism in design."
 
 
-Since all my friends constantly nag me about it, here it finally is: My personal
-blog. It's about programming language design and Nim.
+My blog is about programming language design and the Nim
+programming language in particular.
 
-In case you didn't notice, `Nim <http://nim-lang.org>`_ is the
-programming language I designed and implemented in my spare time. Nim is
-still in development but it's very useful already; it can compile itself and
-for instance this blog has been created with Nim's documentation generator.
 
 List of Articles
 ================
@@ -32,7 +28,10 @@ List of Articles
 | An article showing how Nim's metaprogramming features can even model
   Perl's features.
 
-| `Karax and Ormin <karax_ormin.html>`_
+| `Nim without GC <destructors.html>`_
+| Exploring how Nim would look like without a garbage collector.
+
+| `Karax <karax.html>`_
 | An article showing how Nim can be used to develop simple and efficient single
   page applications via Nim's JS backend.
 

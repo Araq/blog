@@ -8,7 +8,7 @@ body {
 }
 
 #container {
-    width: 700px;
+    max-width: 700px;
     margin: auto;
     background-color: #ffffff;
     /*-moz-box-shadow: 5px -12px 10px #2d2d2d, -5px -12px 10px #2d2d2d;
@@ -121,6 +121,10 @@ pre, span.tok {
   color: black;
   line-spacing: 110%;
   padding: 2px;
+}
+
+pre {
+  overflow: auto;
 }
 
 span.red {
@@ -270,3 +274,11 @@ ul.auto-toc { list-style-type: none }
 /*a.reference { color: #E00000; font-weight:bold;}
 a.reference:hover {color: #E00000;background-color: #ffff00;display: margin;
   font-weight:bold;}*/
+
+@media screen and (max-width:720px) {
+  #container {
+    max-width: 100%;
+    margin: unset;
+    padding: 0px 10px;
+  }
+}
