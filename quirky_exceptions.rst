@@ -1,6 +1,12 @@
-=================
+==================================
+       Araq's Musings
+==================================
+
+
 Quirky exceptions
 =================
+
+*2019-01-06*
 
 In this blog post I explore an alternative way to implement exception/error
 handling that I coined "quirky exception handling".
@@ -11,7 +17,7 @@ anything like that.**
 
 
 Code transformations for exceptions
-===================================
+-----------------------------------
 
 While reading the most recent papers about garbage collectors and language
 implementations that compile to C I stumbled upon the following paper
@@ -91,7 +97,7 @@ function calls.**
 
 
 Problems of exceptions
-======================
+----------------------
 
 Performance considerations aside, this way of implementing exceptions is quite
 truthful to their semantic nature:
@@ -132,7 +138,7 @@ kills the process and "hard disk full" is ignored, as I said,
 
 
 Quirky exceptions
-=================
+-----------------
 
 "Quirky exceptions" attack all of these problems and are almost as convenient
 to use as traditional exceptions. Like before, we map a ``throw`` operation
@@ -183,10 +189,10 @@ this setup is acceptable and can sometimes be preferable over traditional except
 
 
 Questions
-=========
+---------
 
 Isn't that good old ``errno`` styled error handling?
-----------------------------------------------------
+####################################################
 
 Not quite, exceptions still can contain
 niceties such as stack traces and custom data since it's based on inheritance. Also usually in
@@ -196,7 +202,7 @@ have this problem.
 
 
 What happens in ``a[i] = p()`` when ``p`` raises?
--------------------------------------------------
+#################################################
 
 ``p`` sets ``currentException`` and returns a value. This value is then
 assigned to ``a[i]``. Instead of a sum type like ``Either`` Quirky Exceptions
@@ -213,7 +219,7 @@ there is no disruptive control flow ("crash"), the code bubbles along.
 
 
 OMG?! That is terrible!
------------------------
+#######################
 
 Well judging from the limited amount of experiments that I have been able to
 pursuit, this seems to be a problem that rarely comes up in practice and
@@ -244,7 +250,7 @@ is an obvious candidate. And some (but not all) writes to the heap.
 
 
 Isn't this approach inherently error prone?
--------------------------------------------
+###########################################
 
 Try the ``araq-quirky-exceptions`` branch of Nim, compile your code with
 ``--define:nimQuirky`` and try it for yourself.
@@ -254,9 +260,11 @@ itself uses exceptions too and was ported in about one hour to work with
 Quirky Exceptions.
 
 The effort in porting code amounts to finding ``raise`` statements in loops
-and to convert them to a ``raise; break`` combination. Erroneous writes to the
+and to convert them to a ``raise; break`` combination.
+
+**Erroneous writes to the
 heap didn't cause any problems, probably because these are not "undone" by
-traditional exception handling either.
+traditional exception handling either.**
 
 These results are an indication that the approach has merit,
 especially when interoperability with C or webassembly is most important
