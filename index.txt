@@ -35,5 +35,5 @@ List of Articles
 | An article showing how Nim can be used to develop simple and efficient single
   page applications via Nim's JS backend.
 
-| `Quirky Exceptions <quirky_exceptions>`_
-| Musings about an alternative exception handling strategy.
+| `Quirky Exceptions <quirky_exceptions.html>`_
+| Musings about an alternative exception handling strategy.
