@@ -222,7 +222,7 @@ OMG?! That is terrible!
 #######################
 
 Well judging from the limited amount of experiments that I have been able to
-pursuit, this seems to be a problem that rarely comes up in practice and
+pursue, this seems to be a problem that rarely comes up in practice and
 here is an easy workaround:
 
 .. code-block:: Nim
