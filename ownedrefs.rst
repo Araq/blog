@@ -320,7 +320,7 @@ This model has significant advantages:
   adding the ``owned`` keyword to strategic places. The compiler's error
   messages will guide you.
 - Since it doesn't use tracing the runtime is independent of the involved
-  heap sizes. Heaps of terrabytes or kilobytes in size make no difference.
+  heap sizes. Heaps of terabytes or kilobytes in size make no difference.
 - Doubly linked lists, trees and most other graph structures are easily
   modeled and don't need a borrow checker or other parametrized
   type system extensions.
