@@ -30,7 +30,7 @@ collector, there are new languages like Rust and Swift which have some
 semi automatic memory management but lack any *tracing* GC technology. What
 happened? Hardware advanced to a point where memory management and data type
 layouts are very important for performance, memory access became much slower
-compared to the CPU, and heap sizes are now measured in Giga- and Terrabytes.
+compared to the CPU, and heap sizes are now measured in Giga- and Terabytes.
 
 Another problem is that tracing GC algorithms are
 selfish; they only work well when a lot of information about the potential
