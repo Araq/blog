@@ -6,6 +6,8 @@
 A new runtime for Nim
 =====================
 
+*2019-03-26*
+
 In this blog post I explore how the *full* Nim language can be used without
 a tracing garbage collector. Since strings and sequences in Nim can also
 be implemented with destructors the puzzle to solve is what to do with Nim's
