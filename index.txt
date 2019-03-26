@@ -37,3 +37,6 @@ List of Articles
 
 | `Quirky Exceptions <quirky_exceptions.html>`_
 | Musings about an alternative exception handling strategy.
+
+| `Owned Refs <ownedrefs.html>`_
+| Musings about ownership in Nim.
