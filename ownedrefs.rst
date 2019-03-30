@@ -333,7 +333,7 @@ And of course, disadvantages:
   can be proved correct these days for the important cases.
 - You need to port your code and add ``owned`` annotations.
 - ``nil`` as a possible value for ``ref`` stays with us as it is required
-  to unarm dangling pointers.
+  to disarm dangling pointers.
 
 
 Immutability
