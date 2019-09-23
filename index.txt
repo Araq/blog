@@ -40,3 +40,6 @@ List of Articles
 
 | `Owned Refs <ownedrefs.html>`_
 | Musings about ownership in Nim.
+
+| `V1 is here <v1.html>`_
+| Personal words about version 1.
