@@ -6,7 +6,7 @@
 Goto based exceptions
 =====================
 
-*2019-01-08*
+*2020-01-08*
 
 The development version of Nim now offers a new exception handling
 implementation called "goto based exceptions". It can be enabled via
