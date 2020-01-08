@@ -43,3 +43,6 @@ List of Articles
 
 | `V1 is here <v1.html>`_
 | Personal words about version 1.
+
+| `Goto based Exceptions <gotobased_exceptions.html>`_
+| The alternative exception handling implementation arrived.
