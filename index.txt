@@ -46,3 +46,6 @@ List of Articles
 
 | `Goto based Exceptions <gotobased_exceptions.html>`_
 | The alternative exception handling implementation arrived.
+
+| `Write tracking for Nim -- part 2 <writetracking_2.html>`_
+| This blog post explains Nim's ``--experimental:strictFuncs`` mode.
