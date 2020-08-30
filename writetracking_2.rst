@@ -1,7 +1,6 @@
 ==================================
-  Araq's Musings
+  Write tracking for Nim -- part 2
 ==================================
-
 
 Write tracking for Nim -- part 2
 ================================

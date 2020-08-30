@@ -1,5 +1,5 @@
 ==================================
-  Araq's Musings
+  A new concurrency system for Nim
 ==================================
 
 
