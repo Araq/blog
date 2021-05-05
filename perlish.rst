@@ -6,6 +6,8 @@
 Perl and Nim
 ============
 
+**Warning: The information presented here is severely outdated.**
+
 *2016-10-02*
 
 **Disclaimer**: If you like to skim over things, don't miss the end!

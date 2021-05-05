@@ -146,21 +146,6 @@ implementation is on par with C++'s table based exception handling while offerin
 the already mentioned advantages.
 
 
-Caveats
--------
-
-In the "goto based exceptions" mode checked runtime errors like "Index out of bounds"
-or integer overflows are not catchable and terminate the process. This is in compliance
-with the Nim spec, quoting the `manual <https://nim-lang.org/docs/manual.html#definitions>`_:
-
-  Whether a checked runtime error results in an exception or in a fatal
-  error is implementation specific.
-
-
-But I also consider it a strength: It means there is a cleaner separation between *bugs*
-and *runtime errors* and code like ``let x = try: f() except: defaultValue`` does not
-accidentally catch programming bugs anymore.
-
 
 Conclusion
 ----------

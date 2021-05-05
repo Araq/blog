@@ -6,8 +6,16 @@
 A new concurrency system for Nim
 ===================================
 
+**Warning: The information presented here is severely outdated.**
+Nim's concurrency is now based on different mechanisms
+(scope based memory management and destructors).
+
+
 Part 2
 ------
+
+*2013-06*
+
 
 Part 1 introduced the basic ideas behind Nim's concurrency model.
 Here in part 2 things get more formal. However you will be rewarded by
