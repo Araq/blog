@@ -49,3 +49,6 @@ List of Articles
 
 | `Write tracking for Nim -- part 2 <writetracking_2.html>`_
 | This blog post explains Nim's ``--experimental:strictFuncs`` mode.
+
+| `Nimony <nimony.html>`_
+| Nimony is a new compiler paving the way to Nim 3.
