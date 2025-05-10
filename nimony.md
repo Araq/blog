@@ -2,6 +2,8 @@
 
 *2025-05-03*
 
+*Minor edits: 2025-05-10*
+
 [Nimony](https://github.com/nim-lang/nimony) is a new compiler for a variant of Nim which will become Nim 3.0, eventually.
 However, Nim is a big language so replicating what it does will take its time.
 
@@ -19,6 +21,7 @@ rules out just-in-time compilers and tracing garbage collectors. The primitive t
 like `int` and `char` directly map to machine words and bytes. Complex types are formed
 without indirections: An object with fields `a, b: float` takes up `2 * sizeof(float)`
 bytes and is inlined directly into a stack frame or an embedding structure.
+(This is nothing new, Nim 2 does all of that already.)
 
 
 ## Automatic memory management
@@ -36,6 +39,8 @@ MM based on destructors has the tremendous advantage that it actually **composes
 channels which require OS resource deallocation simply works. No other MM system offers this:
 Neither GCs with their unpredictable finalizers nor region-based MM which tends to keep objects around for much longer than necessary.
 
+In other words, Nim 2's way of doing it is basically perfect and we simply reimplemented it.
+
 
 ## Error handling
 
@@ -43,7 +48,7 @@ Neither GCs with their unpredictable finalizers nor region-based MM which tends 
 
 I personally prefer to make the error state part of the objects: Streams can be in an error state, floats can be NaN and integers should be `low(int)` if they are invalid (`low(int)` is a pointless value anyway as it has no positive equivalent).
 
-If such an object is not available, a thread-local error variable can be used as a side channel to signal errors. One can easily attach a stack trace to such an error and it can be checked whenever convenient. This changes the default from "on error return" to "on error continue".
+If such an object is not available, a thread-local error variable can be used as a side channel to signal errors. One can easily attach a stack trace to such an error and it can be checked whenever convenient.
 
 Nevertheless Nimony offers Nim's traditional exception handling, but with a twist: A routine
 that can raise an exception must always be annotated with `{.raises.}`. It is not possible to
@@ -98,6 +103,12 @@ proc constructTree(payload: sink string): Node {.raises.} =
   # can assume result != nil here as we are in the .raises context:
   result.field = payload
 ```
+
+In other words, general pointer checking is done with `nil` / `not nil annotations` plus static analysis that enforces you got it right. But for `new` its return type is polymorphic:
+
+- In a `.raises` routine we already have a channel for OOM propagation so the return type is `ref T not nil`.
+- In a routine that has no `.raises` annotation the return type is `nilable ref T` so you are forced to check for nil before you can deref the pointer.
+
 
 This design to handle OOM does not depend on exceptions but can be used in combination with them. Experience
 with it will tell us whether it holds up well for realistic systems or not.
@@ -325,6 +336,6 @@ While the code for the avoidtemps plugin is beyond the scope of this article, th
 
 Nimony represents an ambitious evolution of the Nim programming language, incorporating lessons learned from years of practical experience with Nim, while introducing novel approaches to error handling and meta-programming. As a work in progress, Nimony is being actively developed with a target release date in autumn 2025.
 
-If you want to help us with development, [deepwiki](https://deepwiki.com/nim-lang/nimony) produced an excellent overview of our compiler architecture. Yes, it is AI generated but it's correct, I reviewed it.
+If you want to help us with development, [the deepwiki AI](https://deepwiki.com/nim-lang/nimony) produced an excellent overview of our compiler architecture.
 
 If you want to support us, please contribute to https://opencollective.com/nim! Stay tuned for updates and early preview releases as we progress toward this milestone.
