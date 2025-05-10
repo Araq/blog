@@ -336,6 +336,6 @@ While the code for the avoidtemps plugin is beyond the scope of this article, th
 
 Nimony represents an ambitious evolution of the Nim programming language, incorporating lessons learned from years of practical experience with Nim, while introducing novel approaches to error handling and meta-programming. As a work in progress, Nimony is being actively developed with a target release date in autumn 2025.
 
-If you want to help us with development, [the deepwiki AI](https://deepwiki.com/nim-lang/nimony) produced an excellent overview of our compiler architecture.
+If you want to help us with development, the [deepwiki AI](https://deepwiki.com/nim-lang/nimony) produced an excellent overview of our compiler architecture.
 
 If you want to support us, please contribute to https://opencollective.com/nim! Stay tuned for updates and early preview releases as we progress toward this milestone.
