@@ -52,3 +52,6 @@ List of Articles
 
 | `Nimony <nimony.html>`_
 | Nimony is a new compiler paving the way to Nim 3.
+
+| `S-Expressions <sexpressions.html>`_
+| The unreasonable effectiveness of S-Expressions.
