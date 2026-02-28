@@ -11,7 +11,7 @@ The unreasonable effectiveness of S-Expressions
 *2026-02-28*
 
 
-It is well known that unique pointers are sufficient to model trees. A unique pointer is also often called a "linear" pointer, in theory one can embed the data that it points to directly into your parent object:
+It is well known that unique pointers are sufficient to model trees. A unique pointer is also often called a "linear" pointer, in theory, one can embed the data that it points to directly into your parent object:
 
 .. raw:: html
 
@@ -171,7 +171,7 @@ semantics) should be used to interpret the tags within its scope. The ``.lang`` 
 a system of tags both a namespace and concrete semantics. Crucially, ``.lang`` is itself a tag (in parentheses),
 which enables **nesting different languages within a single document**.
 
-In the context of compilers this is very useful for inline assembler or Nim's `emit` pragma which allows you to embed C/C++
+In the context of compilers, this is very useful for inline assembler or Nim's `emit` pragma which allows you to embed C/C++
 or JavaScript code directly in your Nim code.
 
 With the same mechanism NIF elegantly subsumes HTML, CSS, JavaScript, and XML.
@@ -323,7 +323,7 @@ For example:
 )
 ```
 
-Here, the root node is at line 42, column 10 in ``file.nim``. The ``proc`` node is 8 columns to the
+Here, the root node is at column 42, line 10 in ``file.nim``. The ``proc`` node is 8 columns to the
 right of its parent. The ``params`` node is 2 columns right and 1 line down. Negative offsets use ``~``
 instead of ``-`` (useful for infix operators where the left operand precedes the operator).
 
@@ -338,7 +338,7 @@ rendered element back to its template source location would simplify development
 **Configuration files**, **data formats**, **protocol messages** — any structured data format would
 be more debuggable and traceable if it carried provenance information.
 
-NIF's inline approach makes this practical. Unlike source maps which are a complex add-on system,
+NIF's inline approach makes this practical. Unlike source maps, which are a complex add-on system,
 NIF's line information is just part of the format itself. Any tool that processes NIF automatically
 gets provenance for free, making it trivial to add source location tracking to any system that uses
 NIF as its representation format. This universal applicability is another example of how NIF's simple,
