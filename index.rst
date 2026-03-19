@@ -16,8 +16,12 @@ List of Articles
 2026
 ----
 
-| `S-Expressions <sexpressions.html>`_
+| `Nimony series, part 1: S-Expressions <sexpressions.html>`_
 | The unreasonable effectiveness of S-Expressions.
+
+| `Nimony series, part 2: Implementing NIF in Nim <nif_implementation.html>`_
+| A follow-up to the NIF introduction. Here I focus on how NIF is
+  implemented for Nimony and what makes it special.
 
 
 2025
