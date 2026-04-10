@@ -23,6 +23,9 @@ List of Articles
 | A follow-up to the NIF introduction. Here I focus on how NIF is
   implemented for Nimony and what makes it special.
 
+| Fog Frog Wars <fogfrogwars.html>`_
+| April Fools 2026.
+
 
 2025
 ----
