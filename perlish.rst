@@ -212,7 +212,7 @@ newline (bah!):
   proc print(args: varargs[string, `$`]) =
     for x in args: stdout.write x
 
-Now let's see in action:
+Now let's see it in action:
 
 .. code-block:: nim
   perlish:

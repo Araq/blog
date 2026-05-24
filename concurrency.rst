@@ -27,7 +27,7 @@ isomorphic: You can simulate shared memory via message passing (which is what
 modern hardware does, to some extent) and you can simulate message passing
 via shared memory.
 
-In practice the differences are vast: Syncronization
+In practice the differences are vast: Synchronization
 mechanisms for shared memory include locks, lock free low level solutions
 like "compare and swap" or transactional memory.
 
@@ -310,7 +310,7 @@ check) then it's as correct as the parametrized version but much simpler.
 To be completely honest I have to mention that this solution also allows for
 some races when it comes to lock construction/mutation as an unprotected
 dereference to 'sv' is allowed to access the lock itself. I consider this an
-edge case which does not happen in practice. In pratice the shared memory is
+edge case which does not happen in practice. In practice the shared memory is
 allocated and the associated locks are created before concurrent access to the
 memory happens.
 
